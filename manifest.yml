@@ -1,0 +1,8 @@
+---
+applications:
+  - name: cf-gcp-cloudsql-boot
+    path: target/cloudsql-0.0.1-SNAPSHOT.jar
+    buildpack: java_buildpack_offline
+    memory: 1G
+    env:
+      JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
