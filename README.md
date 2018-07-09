@@ -10,8 +10,8 @@ https://docs.spring.io/spring-cloud-gcp/docs/1.1.0.BUILD-SNAPSHOT/reference/html
 cf create-service google-cloudsql-mysql standard cloudsql -c '{"authorized_networks": "0.0.0.0/0", "region": "europe-west2"}'
 ./mvnw clean package
 cf push --no-start
-cf bind-service gcp-cloudsql-boot cloudsql -c '{"role": "editor"}'
-cf start gcp-cloudsql-boot
+cf bind-service cf-gcp-cloudsql-boot cloudsql -c '{"role": "editor"}'
+cf start cf-gcp-cloudsql-boot
 ```
 
 ## test
